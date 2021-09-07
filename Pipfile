@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+django = "*"
+django-ckeditor = "*"
+pillow = "*"
+pylint = "*"
+pylint-django = "*"
+autopep8 = "*"
+pycodestyle = "*"
+
+[requires]
+python_version = "3.9"

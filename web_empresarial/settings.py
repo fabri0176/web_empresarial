@@ -65,7 +65,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-               
+
             ],
         },
     },
@@ -82,8 +82,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'webempresarial',
         'USER': 'root',
-        'PASSWORD': 'rootpassword',
-        'HOST': '127.0.0.1',
+        'PASSWORD': '',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
 }
@@ -129,4 +129,4 @@ STATIC_URL = '/static/'
 
 # Definir media files
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
