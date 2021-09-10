@@ -16,4 +16,4 @@ class Page(models.Model):
         ordering = ['title']
 
     def __str__(self) -> str:
-        return f'{self.id} - {self.title}'
+        return f'{self.title}'

@@ -8,8 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block title %}{% endblock title %} | La Caffettiera</title>
+    <title>{% block title %}{% endblock %} | La Caffettiera</title>
+
     {% load static %}
+
     <!-- Bootstrap -->
     <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -39,22 +41,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
-            <li class="nav-item {% if request.path == '/' %}active{% endif %} px-lg-4">
+            <li class="nav-item px-lg-4 {% if request.path == '/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">Inicio</a>
             </li>
-            <li class="nav-item {% if request.path == '/about/' %}active{% endif %} px-lg-4">
+            <li class="nav-item px-lg-4 {% if request.path == '/about/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'about' %}">Historia</a>
             </li>
-            <li class="nav-item {% if request.path == '/services/' %}active{% endif %} px-lg-4">
+            <li class="nav-item px-lg-4 {% if request.path == '/services/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'services' %}">Servicios</a>
             </li>
-            <li class="nav-item {% if request.path == '/store/' %}active{% endif %} px-lg-4">
+            <li class="nav-item px-lg-4 {% if request.path == '/store/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'store' %}">Visítanos</a>
             </li>
-            <li class="nav-item {% if request.path == '/contact/' %}active{% endif %} px-lg-4">
+            <li class="nav-item px-lg-4 {% if request.path == '/contact/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
             </li>
-            <li class="nav-item {% if request.path|slice:":6" == '/blog/' %}active{% endif %} px-lg-4">
+            <li class="nav-item px-lg-4 {% if request.path|slice:":6" == '/blog/' %}active{% endif %}">
               <a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
             </li>
           </ul>
@@ -62,11 +64,8 @@
       </div>
     </nav>
 
-    <!-- Contenido-->
-    {% block content %}{% endblock content %}
-    <!-- /Contenido-->
+    {% block content %} {% endblock %}
 
-    <!-- Pié de página -->
     <!-- Pié de página -->
     <footer class="footer text-faded text-center py-5">
       <div class="container">
@@ -106,7 +105,7 @@
             <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{page.title}}</a> {% if not forloop.last %}·{% endif %} 
           {% endfor %}
         </p>
-        <p class="m-0 mbt1">&copy; La Caffettiera 2021</p>
+        <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
       </div>
 	  </footer>
 
